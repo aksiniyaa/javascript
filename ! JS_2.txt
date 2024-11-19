@@ -1,0 +1,61 @@
+﻿JS. HW_2
+
+
+
+
+1. Скрипт должен на вход принимать строку.
+function validateString(input) {
+
+
+
+
+ 2. После проверки строки выводить в консоль сообщение где будет конкретно написано, что не так в введенной строке.
+
+
+ 3. Минимум 5 символов в строке
+ if (input.length < 5) {
+        console.log("Error: String must contain at least 5 символов.");
+    }
+
+
+ 4. Максимум 64 символа в строке
+} else if (input.length > 64) {
+        console.log("Error: String must contain a maximum of 64 символа.");
+    }
+
+
+ 5. В строке должны быть буквы
+if (!/[a-zA-Z]/.test(input)) {
+        console.log("Error: The string must contain letters.");
+    }
+
+
+ 6. Должна быть хотя бы одна буква в верхнем регистре
+if (!/[A-Z]/.test(input)) {
+        console.log("Error: There must be at least one upper case letter.");
+    }
+
+
+ 7. Должна быть хотя бы одна цифра
+if (!/\d/.test(input)) {
+        console.log("Error: There must be at least one digit.");
+    }
+
+
+ 8. Должна быть хотя бы одна @
+if (!/@/.test(input)) {
+        console.log("Error: There must be at least one @.");
+    }
+
+
+ 9. Строка не должна быть пустой
+if (inputString.length === 0) {
+    console.log("Error: the string should not be empty.");
+}
+ if (!input) {
+        console.log("Error: The string should not be empty.");
+    }
+
+
+console.log("The string passed validation.");
+}
